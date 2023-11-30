@@ -1,317 +1,458 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /* outline: 1px solid limegreen; */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-:root{
-    --brand:#236067;
-    --col1 : #009da0;
-    --col2 : #54b9a2;
-    --col3 : #d2e2a8;
-    --col4 : #f6f3a9; 
-    --col1-bg : #009da088;
-    --col2-bg : #54b9a266;
-    --col3-bg : #d2e2a844;
-    --col4-bg : #f6f3a922; 
-    --till:30px;
+
+:root {
+  --brand:#236067;
+  --col1: #009da0;
+  --col2: #54b9a2;
+  --col3: #d2e2a8;
+  --col4: #f6f3a9;
+  --col1-bg: #009da088;
+  --col2-bg: #54b9a266;
+  --col3-bg: #d2e2a844;
+  --col4-bg: #f6f3a922;
+  --till:30px;
 }
-body{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    place-items: center;
-    background-color: var(--col3);
-    background-image: 
-    linear-gradient(45deg, transparent 50%,var(--brand) 50%),
-    linear-gradient(225deg,transparent 50%,var(--brand) 50%);
-    background-repeat: no-repeat;
-    background-size: 100vw 100vw;
-    background-position: calc(100vw - 80vh) 0  , -20vh 0;
+
+body {
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: var(--col3);
+  background-image: linear-gradient(45deg, transparent 50%, var(--brand) 50%), linear-gradient(225deg, transparent 50%, var(--brand) 50%);
+  background-size: 100vw 100vw;
+  background-repeat: no-repeat;
+  background-position: bottom left, top right;
+}
+@media screen and (max-width: 500px) {
+  body {
+    --till: 45px;
     font-size: 20px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-main{
-    width: 96%;
-    /* height: 40vh; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin: 2vw 0;
-    backdrop-filter: blur(15px);
-    background-color: #00000033;
-}
-main>.toptab{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50vh;
-    /* background-color: #dad1c6; */
-    box-shadow: 0 5px 25px black;
-    /* ,inset 0 5px 25px black,inset 0 -5px 10px black */
-    font-family:  'Carrois Gothic', sans-serif;
-}
-.toptab >.profiden{
-    height: 90%;
-    aspect-ratio: 1/1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    border-radius: 50%;
-}
-.profiden > img{
-    width: 75%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 2px 2px 20px black;
-    transition: all 0.5s ease-in-out;
-}
-.profiden > .txtinfo{
-    width: 90%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    font-size: .75em;
-    color: white;
-    transition: all 0.5s ease-in-out;
-}
-.txtinfo>#name{
-    font-size: 1.5em;
-}
-.txtinfo>#title{
-    font-size: 1em;
-    color: #ddd;
-    text-decoration: underline;
-}
-.profinfo{
-    width: 25%;
-    height: 100%;
-    background-color: var(--col4);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    clip-path: polygon(0 0, calc(100% - var(--till)) 0, 100% 100%, var(--till) 100%);
-    font-size: .8em;
-    filter: drop-shadow(10px 0px 20px black);
-}
-.profinfo>.info{
-    display: flex;
-    width: 80%;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 80%;
-}
-.info>.blck{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-.blck:first-of-type>p{
-    text-align: center;
-    font-weight: bold;
-    padding: 2%;
-    color: white;
-    border-radius: .5rem;
-    background-color: var(--brand);
-}
-.blck:not(:last-of-type){
-    padding-bottom: 2%;
-    border-bottom: 1px solid black;
-}
-.blck>object{
-    height: 30px;
-}
-.blck>p{
-    text-align: start;
-    width: 100%;
-    padding-left: 5%;
-}
-.blck>p>a{
-    color: black;
-}
-.profinfo>.download{
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.4em;
-    gap: 1rem;
-    background-color: var(--col1);
-    text-decoration: none;
-    color: white;
-}
-.download>object{
-    height: 30px;
-}
-.download>span{
-    text-align: center;
-}
-.profbase{
-    height: 100%;
-    width: 60%;
-    background-color: var(--col1);
-    clip-path: polygon(0 0,calc(100% - var(--till)) 0, 100% 100%, var(--till) 100%);
-    display: flex;
-    font-size: 0.65em;
-    padding-inline: calc(var(--till) + 2%);
-    /* text-transform: lowercase; */
-    list-style-type: none;
-    box-shadow: 2px 2px 20px black;
-}
-.profbase .degree,.profbase .career{
-    width: 60%;
-    height: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    position: relative;
-}
-.career>li,.degree>li{
-    display: flex;
-    color: white;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--col3);
-    /* gap: 1%; */
-    padding-block: 2%;
-    border-radius: .4rem;
-    padding: 1%;
-    position: relative;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    z-index: 2;
-    box-shadow: 3px 3px 5px black;
-}
-li>span{
-    background-color: #00000055 ;
-    height: 100%;
-    display: grid;
-    border-radius: .2rem;
-    place-items: center;
-    padding: 1%;
-}
-.lgt{
-    background-color: #00000033;
-}
-.career>li:first-of-type,.degree>li:first-of-type{
-    width: 100%;
-    height: 12%;
-    border-radius: 0;
-    justify-content: center;
-    background-color: var(--brand);
-    font-size: 1.5em;
-    text-transform: capitalize;
-}
-.ancbar{
-    width: 95vw;
-    height: 12vh;
-    background-color: var(--col3);
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    font-size: 1em;
-    gap: .25rem;
-    text-align: center;
-    position: relative;
-    scroll-behavior: smooth;
-    /* scroll-snap-type: x mandatory; */
-}
-.ancbar::-webkit-scrollbar{
-    height: 0;
-    width: 0;
-}
-.ancbar>span{
-    height: 100%;
-    min-width: 27vw;
-    color: white;
-    padding: 1% 2%;
-    display: grid;
-    place-items: center;
-    background-color: var(--col1);
-    z-index: 1;
-    cursor: pointer;
-    transition: 0.25s ease-in-out;
-}
-.ancbar>span:hover{
-    outline: 5px solid #007274;
-    outline-offset: -5px;
-}
-.ancbar>span:nth-last-of-type(3n+2){
-    scroll-snap-align: center;  
-}
-.ancbar>button{
-    position: fixed;
-    z-index: 2;
-    height: 10vh;
-    aspect-ratio: 1/1;
-    border: none;
-    background-color: transparent;
-    top: calc(50vh + 1rem);
-    cursor: pointer;
-    text-align: center;
-}
-.ancbar>button>img{
-    height: 100%;
-}
-button#lt{
-    background-image: linear-gradient(to right,#00000077,transparent);
-    left: 0;
-}
-button#rt{
-    left: calc(100% - 10vh);
-    background-image: linear-gradient(to left,#00000077,transparent);
-}
-.infotxt{
-    display: none;
-    height: 80vh;
-    overflow-y: auto;
-    color: rgb(223, 223, 223);
-    padding: 1%;
+  }
+  body main {
     gap: 2rem;
-}
-.show{
-    display: block;
-}
-.infotxt>p{
-    background-color: #00000055;
-    padding: 1%;
+  }
+  body main > .toptab {
+    height: auto !important;
+    flex-direction: column;
+    justify-content: center !important;
+    gap: 2rem;
+  }
+  body main > .toptab .profiden, body main > .toptab .profinfo {
+    width: 80% !important;
+    height: 49% !important;
+  }
+  body main > .toptab .profinfo {
+    width: 95% !important;
+    height: 35vh !important;
+    clip-path: none !important;
+    font-size: 10px;
+  }
+  body main > .toptab .profinfo .info {
+    width: 100% !important;
+  }
+  body main > .toptab .profinfo .info .blck {
     width: 100%;
-    width: 98%;
+    transform: none !important;
+  }
+  body main > .toptab .profinfo .info .blck p {
+    font-size: 15px;
+  }
+  body main > .toptab .profinfo .download {
+    padding-left: 0 !important;
+    padding: 2%;
+  }
+  body main > .toptab .profinfo .download object {
+    height: 100% !important;
+  }
+  body main > .toptab .profinfo .download span {
+    font-size: 20px;
+  }
+  body main > .toptab .profinfo .info > .blck > object {
+    height: 3vh !important;
+  }
+  body main > .toptab .profbase {
+    width: 95% !important;
+    clip-path: none !important;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto !important;
+    box-sizing: content-box;
+    padding-block: 5%;
+  }
+  body main > .toptab .profbase .career, body main > .toptab .profbase .degree {
+    width: 95% !important;
+    height: 49% !important;
+    justify-content: center !important;
+  }
+  body main > .toptab .profbase .career li, body main > .toptab .profbase .degree li {
+    transform: none !important;
+    font-size: 15px;
+  }
+  body main > .toptab .profbase .career li:first-of-type, body main > .toptab .profbase .degree li:first-of-type {
+    font-size: 17px !important;
+  }
+  body main > .toptab .profbase .career li span, body main > .toptab .profbase .degree li span {
+    height: 100% !important;
+  }
+  body main > .ancbar {
+    height: 5vh !important;
+  }
+  body main > .ancbar .tabbut {
+    box-sizing: content-box;
+    font-size: 0.6em;
+    padding-inline: 5%;
+  }
+  body main > .ancinfo .infotxt > p {
+    font-size: 0.6em;
+  }
+  body #lt, body #rt {
+    height: 5vh;
+  }
+  body #rt {
+    left: calc(100% - 5vh) !important;
+  }
 }
-.infotxt>p>span{
-    font-size: 1.5em;
-    color: var(--col2);
-    text-decoration: underline;
-    word-break: break-all;
+@media screen and (min-width: 500px) and (max-width: 850px) {
+  body {
+    --till: 45px;
+    font-size: 13px;
+  }
+  body main > .toptab {
+    height: 80vh !important;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center !important;
+  }
+  body main > .toptab .profiden, body main > .toptab .profinfo {
+    width: 30% !important;
+    height: 49% !important;
+  }
+  body main > .toptab .profinfo {
+    width: 60%;
+    clip-path: none !important;
+    font-size: 10px;
+  }
+  body main > .toptab .profinfo .info > .pad {
+    transform: none !important;
+  }
+  body main > .toptab .profinfo .info > .blck > object {
+    height: 3vh !important;
+  }
+  body main > .toptab .profbase {
+    width: 60% !important;
+    flex-direction: column;
+    justify-content: space-around !important;
+    height: 95% !important;
+  }
+  body main > .toptab .profbase .career, body main > .toptab .profbase .degree {
+    width: 70% !important;
+    height: 40% !important;
+    justify-content: space-around !important;
+  }
+  body main > .toptab .profbase .career li > span, body main > .toptab .profbase .degree li > span {
+    height: 100% !important;
+  }
+  body main > .ancbar {
+    height: 8vh !important;
+  }
+  body main > .ancbar .tabbut {
+    font-size: 0.75em;
+  }
+  body main > .ancinfo .infotxt > p {
+    font-size: 0.75em;
+  }
+  body #lt, body #rt {
+    height: 8vh;
+  }
+  body #rt {
+    left: calc(100% - 8vh) !important;
+  }
+}
+@media screen and (min-width: 850px) and (max-width: 1280px) {
+  body {
+    font-size: 13px;
+  }
+  body main > .toptab {
+    height: 40vh !important;
+  }
+  body main > .toptab .profinfo > .info > .blck > object {
+    height: 4vh !important;
+  }
+}
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  body {
+    font-size: 30px;
+  }
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 95%;
+  margin-block: 5vh;
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+body main .toptab {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+  height: 50vh;
+  padding: 5px;
+}
+body main .toptab .profiden {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+}
+body main .toptab .profiden img {
+  width: 90%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  box-shadow: 2px 2px 15px;
+  border-radius: 50%;
+}
+body main .toptab .profiden .txtinfo {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  padding-inline: 2%;
+}
+body main .toptab .profiden .txtinfo #name {
+  font-size: 1.1em;
+}
+body main .toptab .profiden .txtinfo #title {
+  font-size: 0.75em;
+  text-decoration: underline;
+  color: #ddd;
+}
+body main .toptab .profinfo {
+  background-color: var(--col4);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  -webkit-clip-path: polygon(0 0, calc(100% - var(--till)) 0, 100% 100%, var(--till) 100%);
+  clip-path: polygon(0 0, calc(100% - var(--till)) 0, 100% 100%, var(--till) 100%);
+  width: 25%;
+}
+body main .toptab .profinfo .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  width: 80%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body main .toptab .profinfo .info .blck {
+  padding-inline: 2%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9em;
+  border-top: 1px solid var(--brand);
+}
+body main .toptab .profinfo .info .blck object {
+  aspect-ratio: 1/1;
+  height: 5vh;
+}
+body main .toptab .profinfo .info .blck:first-of-type {
+  border: none;
+}
+body main .toptab .profinfo .info .blck:first-of-type p {
+  text-align: center;
+  font-weight: bold;
+  padding: 2%;
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: var(--brand);
+  box-shadow: 1px 1px 5px black;
+  color: white;
+}
+body main .toptab .profinfo .info .blck:first-of-type p .link {
+  color: black !important;
+}
+body main .toptab .profinfo .info .blck:nth-of-type(2) {
+  border: none;
+}
+body main .toptab .profinfo .info .blck:last-of-type p {
+  color: black;
+}
+body main .toptab .profinfo .download {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--col1);
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+  padding-left: 10%;
+}
+body main .toptab .profinfo .download object {
+  height: 70%;
+}
+body main .toptab .profbase {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--col1);
+  -webkit-clip-path: polygon(0 0, calc(100% - var(--till)) 0, 100% 100%, var(--till) 100%);
+  clip-path: polygon(0 0, calc(100% - var(--till)) 0, 100% 100%, var(--till) 100%);
+}
+body main .toptab .profbase .degree, body main .toptab .profbase .career {
+  width: 42%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  align-items: center;
+}
+body main .toptab .profbase .degree li, body main .toptab .profbase .career li {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  background-color: var(--col3);
+  border-radius: 0.5rem;
+  align-items: center;
+  padding: 1%;
+}
+body main .toptab .profbase .degree li:first-of-type, body main .toptab .profbase .career li:first-of-type {
+  font-size: 1em;
+  color: white;
+  padding-block: 2%;
+  font-weight: bold;
+  margin-top: 2%;
+  background-color: var(--brand);
+}
+body main .toptab .profbase .degree li span, body main .toptab .profbase .career li span {
+  font-size: 0.7em;
+  padding-inline: 2%;
+  text-align: center;
+  color: white;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  text-transform: lowercase;
+  border-radius: 0.25rem;
+  outline: 1px solid var(--col3);
+}
+body main .ancbar {
+  width: 95vw;
+  height: 12vh;
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  gap: 0.25rem;
+  background-color: var(--col3);
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+body main .ancbar button {
+  position: fixed;
+  z-index: 2;
+  height: 12vh;
+  aspect-ratio: 1/1;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+body main .ancbar button img {
+  height: 100%;
+}
+body main .ancbar #lt {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4666666667), transparent);
+  left: 0;
+}
+body main .ancbar #rt {
+  left: calc(100% - 12vh);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.4666666667), transparent);
+}
+body main .ancbar .tabbut {
+  min-width: 27vw;
+  height: 100%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: white;
+  background-color: var(--col1);
+  scroll-snap-align: center;
+}
+body main .ancbar .tabbut:hover {
+  outline: 5px solid #007274;
+  outline-offset: -5px;
+}
+body main .ancbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+body main .ancinfo .infotxt {
+  display: none;
+  height: 80vh;
+  overflow-y: auto;
+  color: rgb(223, 223, 223);
+  padding: 1%;
+  gap: 2rem;
+}
+body main .ancinfo .infotxt p {
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  padding: 1%;
+}
+body main .ancinfo .infotxt p span {
+  font-size: 1.5em;
+  color: var(--col2);
+  text-decoration: underline;
+  word-break: break-all;
+}
+body main .ancinfo .show {
+  display: block;
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: none;
-    scrollbar-color: #707070 #c9c9c9;
-    scrollbar-gutter: stable;
-  }
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #707070 #c9c9c9;
+  scrollbar-gutter: stable;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: var(--col2);
-  }
+*::-webkit-scrollbar-track {
+  background: var(--col2);
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #707070;
-    border-radius: 0px;
-    border: 0px solid #ffffff;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #707070;
+  border-radius: 0px;
+  border: 0px solid #ffffff;
+}/*# sourceMappingURL=style.css.map */

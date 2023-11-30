@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
         <style></style>
         <title></title>
@@ -36,7 +39,7 @@
                         </div>
                         <div class="blck pad">
                             <object data="https://api.iconify.design/material-symbols:add-link-rounded.svg?color=%23681a41" type="image/svg+xml"></object>
-                            <p><a href="https://rlacollege.edu.in/">Visit our website</a></p>
+                            <p><a id="link" href="https://rlacollege.edu.in/">Visit our website</a></p>
                         </div>
                     </div>
                     <a href="https://rlacollege.edu.in/images/Prof%20Rakesh%20Gupta%20Profile.pdf" download="resume" class="download">
@@ -290,7 +293,7 @@
             let at = 2;
             let displayed = 0;
             for (let i = 0; i < pads.length; i++) {
-                pads[i].style.transform = `translateX(${3*i-5}%) scaleX(1.05)`;
+                pads[i].style.transform = `translateX(${3*i-7}%) scaleX(1.05)`;
             }
             for (let i = 0; i < padns.length; i++) {
                 padns[i].style.transform = `translateX(${3*i-12}%) scaleX(1.05)`;
