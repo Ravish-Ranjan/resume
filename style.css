@@ -100,7 +100,7 @@ body {
     height: 100% !important;
   }
   body main > .ancbar {
-    height: 5vh !important;
+    height: 8vh !important;
   }
   body main > .ancbar .tabbut {
     box-sizing: content-box;
@@ -111,10 +111,10 @@ body {
     font-size: 0.6em;
   }
   body #lt, body #rt {
-    height: 5vh;
+    height: 8vh;
   }
   body #rt {
-    left: calc(100% - 5vh) !important;
+    left: calc(100% - 8vh) !important;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 850px) {
