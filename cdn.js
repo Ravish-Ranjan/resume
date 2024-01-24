@@ -13,7 +13,7 @@ const cndList = {
 };
 
 
-async function getCDN(lst) {
+function getCDN(lst) {
 	let required = []
 	lst.forEach(cdn => {
 		try {
@@ -28,8 +28,8 @@ async function getCDN(lst) {
 		}
 
 	});
-	required.forEach(cdn => {
-		document.getElementsByTagName("head")[0].innerHTML += cdn;
-	});
-	return true;
+	// required.forEach(cdn => {
+	// 	document.getElementsByTagName("head")[0].innerHTML += cdn;
+	// });
+	return required;
 }
