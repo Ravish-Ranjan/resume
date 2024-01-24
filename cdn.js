@@ -12,13 +12,8 @@ const cndList = {
 	]
 };
 
-function publish(cdns) {
-	cdns.forEach(cdn => {
-		document.getElementsByTagName("head")[0].innerHTML += cdn;
-	});
-}
 
-function getCDN(lst) {
+async function getCDN(lst) {
 	let required = []
 	lst.forEach(cdn => {
 		try {
@@ -32,5 +27,7 @@ function getCDN(lst) {
 		}
 
 	});
-	publish(required);
+	required.forEach(cdn => {
+		document.getElementsByTagName("head")[0].innerHTML += cdn;
+	});
 }
