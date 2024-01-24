@@ -24,10 +24,12 @@ async function getCDN(lst) {
 			});			
 		} catch (error) {
 			console.log(`cnd for "${cdn}" not found`);
+			continue;
 		}
 
 	});
 	required.forEach(cdn => {
 		document.getElementsByTagName("head")[0].innerHTML += cdn;
 	});
+	return true;
 }
