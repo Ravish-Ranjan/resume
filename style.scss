@@ -334,7 +334,7 @@ body{
                         justify-content: center;
                         background-color: var(--col3);
                         border-radius: .5rem;
-                        align-items: center;
+                        align-items: stretch;
                         padding: 1%;
                         &:first-of-type{
                             font-size: 1em;
@@ -345,7 +345,7 @@ body{
                             background-color: var(--brand);
                         }
                         span{
-                            font-size: .7em;
+                            font-size: 1.1rem;
                             padding-inline: 2%;
                             text-align: center;
                             color: white;
@@ -359,11 +359,26 @@ body{
                         }
                     }
                 }
+                .degree{
+                    li{
+                        height: 7rem;
+                        span{
+                            flex: 1 0 20%;
+                            height: 100%;
+                            &:nth-of-type(2){
+                                flex: 1 0 60%;
+                            }
+                        }
+                        &:first-of-type{
+                            height: auto;
+                        }
+                    }
+                }
             }
         }
         .ancbar{
             // display: none;
-            width: 95vw;
+            width: 94vw;
             height: 12vh;
             position: relative;
             display: flex;

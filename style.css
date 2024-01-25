@@ -342,7 +342,7 @@ body main .toptab .profbase .degree li, body main .toptab .profbase .career li {
   justify-content: center;
   background-color: var(--col3);
   border-radius: 0.5rem;
-  align-items: center;
+  align-items: stretch;
   padding: 1%;
 }
 body main .toptab .profbase .degree li:first-of-type, body main .toptab .profbase .career li:first-of-type {
@@ -354,7 +354,7 @@ body main .toptab .profbase .degree li:first-of-type, body main .toptab .profbas
   background-color: var(--brand);
 }
 body main .toptab .profbase .degree li span, body main .toptab .profbase .career li span {
-  font-size: 0.7em;
+  font-size: 1.1rem;
   padding-inline: 2%;
   text-align: center;
   color: white;
@@ -366,8 +366,21 @@ body main .toptab .profbase .degree li span, body main .toptab .profbase .career
   border-radius: 0.25rem;
   outline: 1px solid var(--col3);
 }
+body main .toptab .profbase .degree li {
+  height: 7rem;
+}
+body main .toptab .profbase .degree li span {
+  flex: 1 0 20%;
+  height: 100%;
+}
+body main .toptab .profbase .degree li span:nth-of-type(2) {
+  flex: 1 0 60%;
+}
+body main .toptab .profbase .degree li:first-of-type {
+  height: auto;
+}
 body main .ancbar {
-  width: 95vw;
+  width: 94vw;
   height: 12vh;
   position: relative;
   display: flex;
