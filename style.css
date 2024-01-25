@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 :root {
@@ -19,6 +18,7 @@
 }
 
 body {
+  font-size: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: grid;
   place-items: center;
@@ -31,6 +31,7 @@ body {
 @media screen and (max-width: 500px) {
   body {
     --till: 45px;
+    font-size: 20px;
   }
   body main {
     gap: 2rem;
@@ -50,6 +51,7 @@ body {
     height: 35vh !important;
     -webkit-clip-path: none !important;
             clip-path: none !important;
+    font-size: 10px;
   }
   body main > .toptab .profinfo .info {
     width: 100% !important;
@@ -58,12 +60,18 @@ body {
     width: 100%;
     transform: none !important;
   }
+  body main > .toptab .profinfo .info .blck p {
+    font-size: 15px;
+  }
   body main > .toptab .profinfo .download {
     padding-left: 0 !important;
     padding: 2%;
   }
   body main > .toptab .profinfo .download object {
     height: 100% !important;
+  }
+  body main > .toptab .profinfo .download span {
+    font-size: 20px;
   }
   body main > .toptab .profinfo .info > .blck > object {
     height: 3vh !important;
@@ -85,16 +93,24 @@ body {
   }
   body main > .toptab .profbase .career li, body main > .toptab .profbase .degree li {
     transform: none !important;
+    font-size: 15px;
+  }
+  body main > .toptab .profbase .career li:first-of-type, body main > .toptab .profbase .degree li:first-of-type {
+    font-size: 17px !important;
   }
   body main > .toptab .profbase .career li span, body main > .toptab .profbase .degree li span {
-    height: 100%;
+    height: 100% !important;
   }
   body main > .ancbar {
     height: 5vh !important;
   }
   body main > .ancbar .tabbut {
     box-sizing: content-box;
+    font-size: 0.6em;
     padding-inline: 5%;
+  }
+  body main > .ancinfo .infotxt > p {
+    font-size: 0.6em;
   }
   body #lt, body #rt {
     height: 5vh;
@@ -106,6 +122,7 @@ body {
 @media screen and (min-width: 500px) and (max-width: 850px) {
   body {
     --till: 45px;
+    font-size: 13px;
   }
   body main > .toptab {
     height: 80vh !important;
@@ -121,6 +138,7 @@ body {
     width: 60%;
     -webkit-clip-path: none !important;
             clip-path: none !important;
+    font-size: 10px;
   }
   body main > .toptab .profinfo .info > .pad {
     transform: none !important;
@@ -145,6 +163,12 @@ body {
   body main > .ancbar {
     height: 8vh !important;
   }
+  body main > .ancbar .tabbut {
+    font-size: 0.75em;
+  }
+  body main > .ancinfo .infotxt > p {
+    font-size: 0.75em;
+  }
   body #lt, body #rt {
     height: 8vh;
   }
@@ -153,11 +177,24 @@ body {
   }
 }
 @media screen and (min-width: 850px) and (max-width: 1280px) {
+  body {
+    font-size: 13px;
+  }
   body main > .toptab {
     height: 40vh !important;
   }
   body main > .toptab .profinfo > .info > .blck > object {
     height: 4vh !important;
+  }
+}
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  body {
+    font-size: 30px;
   }
 }
 body main {
@@ -202,7 +239,11 @@ body main .toptab .profiden .txtinfo {
   text-align: center;
   padding-inline: 2%;
 }
+body main .toptab .profiden .txtinfo #name {
+  font-size: 1.1em;
+}
 body main .toptab .profiden .txtinfo #title {
+  font-size: 0.75em;
   text-decoration: underline;
   color: #ddd;
 }
@@ -230,6 +271,7 @@ body main .toptab .profinfo .info .blck {
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-size: 0.9em;
   border-top: 1px solid var(--brand);
 }
 body main .toptab .profinfo .info .blck object {
@@ -266,6 +308,7 @@ body main .toptab .profinfo .download {
   align-items: center;
   gap: 1rem;
   background-color: var(--col1);
+  font-size: 1.2em;
   color: white;
   text-decoration: none;
   padding-left: 10%;
@@ -294,35 +337,34 @@ body main .toptab .profbase .degree, body main .toptab .profbase .career {
 }
 body main .toptab .profbase .degree li, body main .toptab .profbase .career li {
   width: 100%;
-  background-color: var(--col3);
   list-style-type: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  background-color: var(--col3);
   border-radius: 0.5rem;
-  font-size: 0.8rem;
-  gap: 0.3rem;
-  padding: 0.3rem;
+  align-items: center;
+  padding: 1%;
 }
 body main .toptab .profbase .degree li:first-of-type, body main .toptab .profbase .career li:first-of-type {
+  font-size: 1em;
   color: white;
   padding-block: 2%;
   font-weight: bold;
   margin-top: 2%;
-  font-size: 1rem;
   background-color: var(--brand);
 }
 body main .toptab .profbase .degree li span, body main .toptab .profbase .career li span {
+  font-size: 0.7em;
+  padding-inline: 2%;
+  text-align: center;
+  color: white;
+  height: 100%;
   display: grid;
   place-items: center;
   background-color: rgba(0, 0, 0, 0.3333333333);
-  text-align: center;
-  flex: 1 0 20%;
-  min-height: 5rem;
-  color: white;
-}
-body main .toptab .profbase .degree li span:nth-of-type(2), body main .toptab .profbase .career li span:nth-of-type(2) {
-  flex: 0 0 55%;
+  text-transform: lowercase;
+  border-radius: 0.25rem;
+  outline: 1px solid var(--col3);
 }
 body main .ancbar {
   width: 95vw;
@@ -374,6 +416,9 @@ body main .ancbar::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
+body main .ancinfo {
+  display: grid;
+}
 body main .ancinfo .infotxt {
   display: none;
   height: 80vh;
@@ -387,6 +432,7 @@ body main .ancinfo .infotxt p {
   padding: 1%;
 }
 body main .ancinfo .infotxt p span {
+  font-size: 1.5em;
   color: var(--col2);
   text-decoration: underline;
   word-break: break-all;
@@ -400,6 +446,7 @@ body main .ancinfo .show {
 * {
   scrollbar-width: none;
   scrollbar-color: #707070 #c9c9c9;
+  scrollbar-gutter: stable;
 }
 
 /* Chrome, Edge, and Safari */
