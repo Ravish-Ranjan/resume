@@ -62,14 +62,14 @@ body{
                 .download{
                     padding-left: 0 !important;
                     padding: 2%;
-                    object{
+                    img{
                         height: 100% !important;
                     }
                     span{
                         font-size: 20px;
                     }
                 }
-                .info>.blck>object{
+                .info>.blck>img{
                     height: 3vh !important;
                 }
             }
@@ -137,7 +137,7 @@ body{
                 .info>.pad{
                     transform: none !important;
                 }
-                .info>.blck>object{
+                .info>.blck>img{
                     height: 3vh !important;
                 }
             }
@@ -178,7 +178,7 @@ body{
         font-size: 13px;
         main>.toptab{
             height: 40vh !important;
-            .profinfo>.info>.blck>object{
+            .profinfo>.info>.blck>img{
                 height: 4vh !important;
             }
         }
@@ -261,7 +261,7 @@ body{
                         gap: 1rem;
                         font-size: .9em;
                         border-top: 1px solid var(--brand);
-                        object{
+                        img{
                             aspect-ratio: 1/1;
                             height: 5vh;
                         }
@@ -304,7 +304,7 @@ body{
                     color: white;
                     text-decoration: none;
                     padding-left: 10%;
-                    object{
+                    img{
                         height: 70%;
                     }
                 }
