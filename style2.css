@@ -6,14 +6,14 @@
 }
 
 :root {
-  --brand: #236067;
-  --col1: #009da0;
-  --col2: #54b9a2;
-  --col3: #d2e2a8;
+  --brand: #3a3537;
+  --col1: #76bb8e;
+  --col2: #ba6c4b;
+  --col3: #6bb4a6;
   --col4: #f6f3a9;
-  --col1-bg: #009da088;
-  --col2-bg: #54b9a266;
-  --col3-bg: #d2e2a844;
+  --col1-bg: #3a353788;
+  --col2-bg: #ba6c4b66;
+  --col3-bg: #6bb4a644;
   --col4-bg: #f6f3a922;
   --till: 30px;
 }
@@ -32,23 +32,23 @@ body {
   place-items: center;
   padding-block: 3rem;
   background-color: var(--col3);
-  background-image: linear-gradient(45deg, transparent 50%, var(--brand) 50%), linear-gradient(225deg, transparent 50%, var(--brand) 50%);
-  background-size: 100vw 100vw;
-  background-repeat: no-repeat;
-  background-position: bottom left, top right;
+  background-image: linear-gradient(45deg, var(--brand), var(--col1));
+  background-image: linear-gradient(135deg, hsl(336, 5%, 22%) 0%, hsl(118, 3%, 28%) 26%, hsl(133, 9%, 34%) 43%, hsl(137, 13%, 40%) 51%, hsl(139, 17%, 47%) 58%, hsl(140, 23%, 53%) 75%, hsl(141, 34%, 60%) 100%);
 }
 body main {
   display: grid;
   gap: 1rem;
   width: 95%;
   background-color: rgba(0, 0, 0, 0.2666666667);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 body main .toptab {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   padding-inline: 1rem;
-  height: 50dvh;
+  max-height: 50dvh;
 }
 body main .toptab .profiden {
   flex: 1 0 20%;
@@ -62,6 +62,7 @@ body main .toptab .profiden img {
      object-fit: cover;
   width: 90%;
   border-radius: 100vw;
+  box-shadow: 0 0 2rem 0.5rem #888;
 }
 body main .toptab .profiden .txtinfo {
   display: grid;
@@ -84,7 +85,6 @@ body main .toptab .profinfo {
   gap: 1rem;
   padding: 1rem;
   background-color: var(--col4);
-  margin-left: -1rem;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 3rem 100%);
           clip-path: polygon(0 0, 100% 0%, 100% 100%, 3rem 100%);
 }
@@ -124,7 +124,7 @@ body main .toptab .profinfo .info .blck img {
   height: 4vh;
 }
 body main .toptab .profinfo .download {
-  background-color: var(--col1);
+  background-color: var(--col2);
   width: 90%;
   height: 5vh;
   display: flex;
@@ -233,11 +233,11 @@ body main .ancbar .tabbut {
   place-items: center;
   text-align: center;
   color: white;
-  background-color: var(--col1);
+  background-color: var(--col2);
   scroll-snap-align: center;
 }
 body main .ancbar .tabbut:hover {
-  outline: 5px solid #007274;
+  outline: 5px solid #70412d;
   outline-offset: -7px;
 }
 body main .ancbar::-webkit-scrollbar {
@@ -290,7 +290,7 @@ body main .ancinfo .infotxt p {
   width: 100%;
 }
 body main .ancinfo .infotxt p span {
-  font-size: 1.5em;
+  font-size: 2rem;
   color: var(--col2);
   text-decoration: underline;
   word-break: break-all;
@@ -318,4 +318,271 @@ body main .ancinfo .show {
   background-color: #707070;
   border-radius: 0px;
   border: 0px solid #ffffff;
+}
+
+@media screen and (max-width: 426px) {
+  .toptab,
+  .profbase {
+    flex-direction: column;
+  }
+  #name {
+    font-size: 1.5rem !important;
+  }
+  #title {
+    font-size: 1rem;
+  }
+  .box-title {
+    font-size: 1.5rem !important;
+    font-weight: bolder;
+  }
+  .info {
+    justify-items: stretch;
+  }
+  .blck {
+    width: 100% !important;
+  }
+  .blck img {
+    height: 3vh !important;
+  }
+  .blck p {
+    font-size: 1.5rem;
+  }
+  .download {
+    width: 100% !important;
+    border-radius: 0.3rem;
+    height: 4vh !important;
+  }
+  .download span {
+    font-size: 1.5rem !important;
+  }
+  .degree,
+  .career {
+    gap: 1rem;
+  }
+  .degree::-webkit-scrollbar,
+  .career::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .profbase {
+    padding: 1rem;
+  }
+  .profbase div > li > span {
+    font-size: 1rem;
+  }
+  .toptab {
+    max-height: 400vh !important;
+  }
+  .toptab .profinfo {
+    -webkit-clip-path: none !important;
+            clip-path: none !important;
+    padding-inline: 1rem !important;
+  }
+  span.tabbut {
+    font-size: 1rem !important;
+    overflow: hidden;
+    height: 7dvh !important;
+    min-width: 40vw !important;
+  }
+  .ancbar {
+    height: 7dvh !important;
+    margin-top: 5rem;
+  }
+  .ancbar span {
+    padding: 0.5rem 1rem !important;
+  }
+  #rt,
+  #lt {
+    height: 7dvh !important;
+  }
+  .infotxt > p {
+    font-size: 1.2rem !important;
+  }
+  .profiden > img {
+    width: 60% !important;
+  }
+  .profinfo {
+    justify-items: stretch !important;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 765px) {
+  #name {
+    font-size: 1rem !important;
+  }
+  #title {
+    font-size: 0.8rem;
+  }
+  .box-title {
+    font-size: 0.8rem !important;
+  }
+  .blck img {
+    height: 3vh !important;
+  }
+  .blck p {
+    font-size: 0.8rem;
+  }
+  .download > span {
+    font-size: 0.8rem !important;
+  }
+  .profbase > div > li > span {
+    font-size: 0.5rem;
+  }
+  .toptab {
+    height: 40vh;
+  }
+  .toptab .profinfo {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 2rem 100%) !important;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 2rem 100%) !important;
+  }
+  span.tabbut {
+    font-size: 0.8rem !important;
+    height: 8vh !important;
+  }
+  .ancbar {
+    height: 8vh !important;
+  }
+  #rt,
+  #lt {
+    height: 8vh !important;
+  }
+  .infotxt > p {
+    font-size: 0.8rem !important;
+  }
+}
+@media screen and (min-width: 765px) and (max-width: 1024px) {
+  #name {
+    font-size: 1rem !important;
+  }
+  #title {
+    font-size: 0.8rem;
+  }
+  .box-title {
+    font-size: 0.8rem !important;
+  }
+  .blck img {
+    height: 3vh !important;
+  }
+  .blck p {
+    font-size: 1rem;
+  }
+  .download > span {
+    font-size: 0.8rem !important;
+  }
+  .profbase > div > li > span {
+    font-size: 0.8rem;
+  }
+  .toptab {
+    height: 40vh;
+  }
+  .toptab .profinfo {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 2rem 100%) !important;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 2rem 100%) !important;
+  }
+  span.tabbut {
+    font-size: 1rem !important;
+    height: 8vh !important;
+  }
+  .ancbar {
+    height: 8vh !important;
+  }
+  #rt,
+  #lt {
+    height: 8vh !important;
+  }
+  .infotxt > p {
+    font-size: 0.8rem !important;
+  }
+}
+@media screen and (min-width: 1600px) and (max-width: 2560px) {
+  #name {
+    font-size: 2rem !important;
+  }
+  #title {
+    font-size: 1.5rem;
+  }
+  .box-title {
+    font-size: 2rem !important;
+  }
+  .blck img {
+    height: 3vh !important;
+  }
+  .blck p {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .download > span {
+    font-size: 2rem !important;
+  }
+  .profbase > div > li > span {
+    font-size: 2rem;
+  }
+  .toptab {
+    height: 40vh !important;
+  }
+  .toptab .profinfo {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 3rem 100%) !important;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 3rem 100%) !important;
+  }
+  span.tabbut {
+    font-size: 2rem !important;
+    height: 8vh !important;
+  }
+  .ancbar {
+    height: 8vh !important;
+  }
+  #rt,
+  #lt {
+    height: 8vh !important;
+  }
+  .infotxt > p {
+    font-size: 2rem !important;
+  }
+}
+@media screen and (min-width: 2560px) {
+  #name {
+    font-size: 2rem !important;
+  }
+  #title {
+    font-size: 1.5rem;
+  }
+  .box-title {
+    font-size: 2.5rem !important;
+  }
+  .blck img {
+    height: 3vh !important;
+  }
+  .blck p {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  .download > span {
+    font-size: 2.2rem !important;
+  }
+  .profbase > div > li > span {
+    font-size: 2.2rem;
+  }
+  .toptab {
+    height: 40vh !important;
+  }
+  .toptab .profinfo {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 3rem 100%) !important;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 3rem 100%) !important;
+  }
+  span.tabbut {
+    font-size: 2.4rem !important;
+    height: 8vh !important;
+  }
+  .ancbar {
+    height: 8vh !important;
+  }
+  #rt,
+  #lt {
+    height: 8vh !important;
+  }
+  .infotxt > p {
+    font-size: 2rem !important;
+  }
+  .profiden > img {
+    width: 70% !important;
+  }
 }/*# sourceMappingURL=style2.css.map */
