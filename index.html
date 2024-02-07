@@ -7,16 +7,29 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style2.css">
-        <link rel="shortcut icon" href="clglogo.png" type="image/x-icon">
+        <link rel="stylesheet" href="./files/style2.css">
+        <link rel="shortcut icon" href="./files/clglogo.png" type="image/x-icon">
         <style></style>
         <title>Prof. Rakesh Kumar Gupta | Ram Lal Anand College</title>
     </head>
     <body>
+        <button type="button" id="ham" onclick="shownav()">
+            <img src="https://api.iconify.design/material-symbols:menu-rounded.svg?color=%23ffffff" alt="Menu">
+        </button>
+        <ul id="nav">
+            <li><a href="#ancinfo" onclick="swt(0)">Administrative Assignments (Recent)</a></li>
+            <li><a href="#ancinfo" onclick="swt(1)">Areas of Interest / Specialization</a></li>
+            <li><a href="#ancinfo" onclick="swt(2)">Research Projects</a></li>
+            <li><a href="#ancinfo" onclick="swt(3)">US Patents Granted</a></li>
+            <li><a href="#ancinfo" onclick="swt(4)">Research Publications</a></li>
+            <li><a href="#ancinfo" onclick="swt(5)">Books and Book chapters</a></li>
+            <li><a href="#ancinfo" onclick="swt(6)">Awards and Distinctions</a></li>
+            <li><a href="#ancinfo" onclick="swt(7)">Association With Professional Bodies</a></li>
+        </ul>
         <main>
             <section class="toptab">
                 <div class="profiden">
-                    <img src="profilepic.jpeg" alt="profile image">
+                    <img src="./files/profilepic.jpeg" alt="profile image">
                     <div class="txtinfo">
                         <span id="name">Prof. Rakesh Kumar Gupta</span>
                         <span id="title">Principal</span>
@@ -77,9 +90,10 @@
                 <span class="tabbut" onclick="swt(7)">Association With Professional Bodies</span>
                 <button id="rt" onclick="scrollDiv('right')"><img src="https://api.iconify.design/material-symbols:chevron-right-rounded.svg?color=%23ffffff" alt="▶"></button>
             </section>
-            <section class="ancinfo">
+            <section class="ancinfo" id="ancinfo">
                 <div class="infotxt show">
                     <p>
+                        <span style="color: var(--col1);font-size: 2.2rem;">Administrative Assignments (Recent)</span><br><br>
                         ● Academic Council Member - 2019-2021, University of Delhi <br><br>
                         ● Member Standing Committee on Academic Matters of Academic Council, University of Delh i2021.<br><br>
                         ● UGC Member of Curriculum Development Committee for B.Sc (H) Microbiology syllabus under CBCS: 2014-15
@@ -87,12 +101,14 @@
                 </div>
                 <div class="infotxt">
                     <p>
+                        <span style="color: var(--col1);font-size: 2.2rem;">Areas of Interest / Specialization</span><br><br>
                         ● Molecular Biology and Recombinant DNA Technology <br><br>
                         ● Applied Microbiology, Environmental Microbiome
                     </p>
                 </div>
                 <div class="infotxt">
                     <p>
+                        <span style="color: var(--col1);font-size: 2.2rem;">Research Projects</span><br><br>
                         <span>Ongoing</span><br>
                         ● Assessment and Monitoring of Depth of Anesthesia using Explainable AI (Principal Investigator: Dr. Neeraj Kumar Sharma Co - Investigators: Prof. R K Gupta, Prof. Sanjeev Sharma), INR 18.50 Lacs, 1.5 Years (2022-2024). Funded by ICMR, Government of India.<br><br>
                         ● Targeting biofilm formation by inhibiting Cysteine biosynthesis pathway enzymes in ESKAPE pathogens with natural products (Principal Investigator: Dr R K Gupta, Co-investigators: Dr Vibha Gupta, Dr Prerna Diwan), INR 45 Lacs, 3 years (2021-2024). Funded by ICMR, Government of India.<br><br>
@@ -109,6 +125,7 @@
                 </div>
                 <div class="infotxt">
                     <p>
+                        <span style="color: var(--col1);font-size: 2.2rem;">US Patents Granted</span><br><br>
                         ● Lux Expression in Eukaryotic cell. US Patent Number - 7300792, Date of Issue - 11/27/2007: Gupta Rakesh K, Patterson Stacey S, Sayler Gary S, Ripp Steven.<br><br>
                         ● Destabilized Bioluminescent Proteins. US Patent Number - 7250284, Date of Issue - 07/31/2007 Allen Michael S, Rakesh Gupta, Gary Sayler.<br><br>
                         <span>US Patents Published Application</span><br>
@@ -120,6 +137,7 @@
                 </div>
                 <div class="infotxt">
                     <p>
+                        <span style="color: var(--col1);font-size: 2.2rem;">Research Publications</span><br><br>
                         ● Dwivedi V, Gupta RK, Gupta A, Chaudhary VK, Gupta S, Gupta V. (2022). Repurposing Novel Antagonists to p7 Viroporin of HCV Using in silico Approach. Letters in drug design and discovery; 19. https://dx.doi.org/10.2174/1570180819666220124112150.<br><br> 
                         ● Snigdha, S., Bajwa, T., Anand, S., Mohan L., Goyal, K., Mittal, M., Gupta, K.R., Wahlang, J. Gupta, R. K. and Diwan, P. (2021). A Cross-sectional Study on Prevalence of Betel nut Chewing Among the Youth of Meghalaya, North East Region of India: Development of Multifaceted Prevention Strategy: Prevalence of Betel Nut Chewing Among the Youth of Meghalaya” Asian Pacific Journal of Health Sciences, 8(3), 185-190. ISSN 2350-0964; E-ISSN 2349-0659 (UGC care listed).<br><br> 
                         ● Deval H, Katoch K, Chauhan DS, Tyagi AK, Gupta RK, Kamal R, Kumar A, Yadav VS, Katoch VM and T. Hussain (2016), TlyA protein of Mycobacterium leprae: a probable bio-marker of active infection, Leprosy Review, Vol. 87 (4). <br><br>
@@ -160,6 +178,7 @@
                 </div>
                 <div class="infotxt">
                     <p>
+                        <span style="color: var(--col1);font-size: 2.2rem;">Books and Book chapters</span><br><br>
                         ● Diwan P. Gupta, R. K. (2021). Substantial Thrust to Indian Rural Economy through Village Dairy Cooperatives as Envisaged by Gandhi. In Devendra Kumar (Eds.) Self-Reliant India: A Gandhian Perspective, pp. 80-96, Shivalik Prakashan, Delhi India, ISBN 978-93-87195-86-8. <br><br>
                         ● Gupta, R. K., Diwan P. (2020). The Gandhian way of Life: An Impeccable solution to World Environmental Concerns. In Devendra Kumar (Eds.) Gandhi Across the Boundaries, pp: 52-62, Shivalik Prakashan, Delhi India, ISBN 978-81-945562-1-3. <br><br>
                         ● Mohan, L., Goyal, K., Anand, S., Mittal, M., Snigdha, S., Bajwa, T., Gupta, K. R., Gupta, R. K. and Diwan, P. (2020). Foldscope: A New Age Exploratory Educational Tool. In A. D. Sharma (Ed.). Foldscope and its Applications (pp. 188-193). New Delhi: National Press Associates. ISBN 978-93-85835-68-1. <br><br>
@@ -172,6 +191,7 @@
                 </div>
                 <div class="infotxt">
                     <p>
+                        <span style="color: var(--col1);font-size: 2.2rem;">Awards and Distinctions</span><br><br>
                         ● United Nations Development Program (UNDP) Fellowship from 1984-1987.<br><br>
                         ● National Dairy Research Institute Fellowship from 1987-1991.<br><br>
                         ● Life time achievement award for Skill India Initiatives by NICER (on the recommendations of International Association of Educators for World Peace -NGO Affiliate of United Nations: ECOSOC, UNDPI) on 12th March, 2017 at the Skill and Vocational Education Summit 2017, held at the India International Centre.<br><br>
@@ -179,6 +199,7 @@
                 </div>
                 <div class="infotxt">
                     <p>
+                        <span style="color: var(--col1);font-size: 2.2rem;">Association With Professional Bodies</span><br><br>
                         ● Association of Microbiologists of India - Life Member <br><br>
                         ● Biotechnology Research Society of India - Life Member <br><br>
                         ● Probiotic Society of India - Life Member<br><br>
@@ -186,6 +207,6 @@
                 </div>
             </section>
         </main>
-        <script src="script.js"></script>
+        <script src="./files/script.js"></script>
     </body>
 </html>

@@ -26,10 +26,12 @@ button {
 span {
 	max-width: 75ch;
 }
+html{
+	scroll-behavior: smooth;
+}
 body {
 	display: grid;
 	place-items: center;
-	// width: calc(100% - 2rem);
 	padding-block: 3rem;
 	background-color: var(--col3);
 	background-image: linear-gradient(45deg, var(--brand), var(--col1));
@@ -43,9 +45,51 @@ body {
 		hsl(140deg 23% 53%) 75%,
 		hsl(141deg 34% 60%) 100%
 	);
-	// background-size: 100vw 100vw;
-	// background-repeat: no-repeat;
-	// background-position: bottom left, top right;
+	position: relative;
+	#ham{
+		position: absolute;
+		display: none;
+		place-items: center;
+		height: 4rem;
+		z-index: 2;
+		border-radius: 100vw;
+		aspect-ratio: 1/1;
+		left: 1rem;
+		top: 1rem;
+		border: none;
+		background-color: var(--col3);
+		img{
+			height: 80%;
+		}
+	}
+	#ham+#nav{
+		position: absolute;
+		background-color: var(--col2);
+		z-index: 1;
+		top: 0;
+		left: 0;
+		padding: 1rem;
+		list-style-type: none;
+		font-size: 1rem;
+		display: none;
+		width: 100%;
+		padding: 5rem .5rem;
+		gap: .5rem;
+		transform: translateY(-100%);
+		transition: transform .5s ease-in-out;
+		li{
+			width: 100%;
+			text-align: center;
+			font-size: 1.5rem;
+			padding: .5rem;
+			a{
+				color: white;
+				position: relative;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		}
+	}
 	main {
 		display: grid;
 		gap: 1rem;
@@ -249,8 +293,8 @@ body {
 				background-color: var(--col2);
 				scroll-snap-align: center;
 				&:hover {
-					outline: 5px solid #70412d;
-					outline-offset: -7px;
+					outline: 3px solid #70412d;
+					outline-offset: -5px;
 				}
 			}
 			&::-webkit-scrollbar {
@@ -307,6 +351,7 @@ body {
 				p {
 					background-color: #00000066;
 					padding: 1%;
+					min-height: 100%;
 					// padding-right: calc(100% - 100ch);
 					width: 100%;
 					span {
@@ -426,6 +471,11 @@ body {
 	}
 	.profinfo {
 		justify-items: stretch !important;
+	}
+	body{
+		#ham,#ham+#nav{
+			display: grid;
+		}
 	}
 }
 @media screen and (min-width: 426px) and (max-width: 765px) {
