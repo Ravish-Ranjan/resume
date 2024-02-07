@@ -16,7 +16,7 @@ function swt(ind) {
 
 	tabs[ind].scrollIntoView({inline:"center"})
 	displayed = ind;
-	shownav()
+	shownav();
 }
 function scrollDiv(direction) {
 	const scrollAmount = 30;
