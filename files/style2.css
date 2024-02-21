@@ -6,14 +6,14 @@
 }
 
 :root {
-  --brand: #3a3537;
-  --col1: #76bb8e;
-  --col2: #ba6c4b;
-  --col3: #6bb4a6;
+  --brand: #681a41;
+  --col1: #d12f35;
+  --col2: 337, 53%, 52%;
+  --col3: #d6cfc3;
   --col4: #f6f3a9;
-  --col1-bg: #3a353788;
-  --col2-bg: #ba6c4b66;
-  --col3-bg: #6bb4a644;
+  --col1-bg: #681a4188;
+  --col2-bg: #d12f3566;
+  --col3-bg: #d6cfc3;
   --col4-bg: #f6f3a922;
   --till: 30px;
 }
@@ -38,6 +38,11 @@ body {
   background-color: var(--col3);
   background-image: linear-gradient(45deg, var(--brand), var(--col1));
   background-image: linear-gradient(135deg, hsl(336, 5%, 22%) 0%, hsl(118, 3%, 28%) 26%, hsl(133, 9%, 34%) 43%, hsl(137, 13%, 40%) 51%, hsl(139, 17%, 47%) 58%, hsl(140, 23%, 53%) 75%, hsl(141, 34%, 60%) 100%);
+  background-color: var(--col3);
+  background-image: linear-gradient(45deg, transparent 50%, var(--brand) 50%), linear-gradient(225deg, transparent 50%, var(--brand) 50%);
+  background-size: 100vw 100vw;
+  background-repeat: no-repeat;
+  background-position: bottom left, top right;
   position: relative;
 }
 body #ham {
@@ -51,14 +56,18 @@ body #ham {
   left: 1rem;
   top: 1rem;
   border: none;
-  background-color: var(--col3);
+  background-color: hsl(var(--col2));
+  transition: 0.5s ease-in-out;
 }
 body #ham img {
   height: 80%;
 }
+body #ham:hover {
+  box-shadow: inset 0 0 10px 2px var(--brand);
+}
 body #ham + #nav {
   position: absolute;
-  background-color: var(--col2);
+  background-color: hsl(var(--col2));
   z-index: 1;
   top: 0;
   left: 0;
@@ -173,7 +182,7 @@ body main .toptab .profinfo .info .blck img {
   height: 4vh;
 }
 body main .toptab .profinfo .download {
-  background-color: var(--col2);
+  background-color: hsl(var(--col2), 1);
   width: 90%;
   height: 5vh;
   display: flex;
@@ -202,7 +211,7 @@ body main .toptab .profbase {
 body main .toptab .profbase .degree,
 body main .toptab .profbase .career {
   flex: 0 1 50%;
-  background-color: var(--col1);
+  background-color: var(--col1-bg);
   padding: 1rem;
   list-style-type: none;
   height: 100%;
@@ -224,7 +233,7 @@ body main .toptab .profbase .degree li,
 body main .toptab .profbase .career li {
   width: 100%;
   display: flex;
-  background-color: var(--col3);
+  background-color: var(--col4);
   gap: 0.5rem;
   padding: 0.5rem;
 }
@@ -248,8 +257,8 @@ body main .toptab .profbase .career li span {
   text-align: center;
   text-transform: lowercase;
   background-color: rgba(0, 0, 0, 0.2666666667);
-  color: white;
   padding: 0.3rem;
+  font-weight: 500;
 }
 body main .toptab .profbase .degree li span:nth-of-type(2),
 body main .toptab .profbase .career li span:nth-of-type(2) {
@@ -282,12 +291,11 @@ body main .ancbar .tabbut {
   place-items: center;
   text-align: center;
   color: white;
-  background-color: var(--col2);
+  background-color: hsl(337, 13%, 52%);
   scroll-snap-align: center;
 }
 body main .ancbar .tabbut:hover {
-  outline: 3px solid #70412d;
-  outline-offset: -5px;
+  box-shadow: inset 0 0 10px 5px hsl(345, 59%, 56%);
 }
 body main .ancbar::-webkit-scrollbar {
   width: 0;
@@ -341,8 +349,10 @@ body main .ancinfo .infotxt p {
 }
 body main .ancinfo .infotxt p span {
   font-size: 2rem;
-  color: var(--col2);
-  text-decoration: underline;
+  font-weight: bolder;
+  color: white;
+  text-underline-offset: 0.75rem;
+  font-style: italic;
   word-break: break-all;
 }
 body main .ancinfo .show {
@@ -361,7 +371,7 @@ body main .ancinfo .show {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--col2);
+  background: hsl(var(--col2), 1);
 }
 
 *::-webkit-scrollbar-thumb {

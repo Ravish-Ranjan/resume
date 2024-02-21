@@ -6,12 +6,12 @@ const tabbar = document.querySelector(".ancbar");
 const nav = document.getElementById("nav");
 let at = 2;
 let displayed = 0;
-tabs[displayed].style.backgroundColor = "#6bb4a6";
+tabs[displayed].style.backgroundColor = "#681a41";
 function swt(ind) {
 	txts[displayed].classList.remove("show");
-	tabs[displayed].style.backgroundColor = "#ba6c4b";
+	tabs[displayed].style.backgroundColor = "hsl(337, 13%, 52%)";
 
-	tabs[ind].style.backgroundColor = "#6bb4a6";
+	tabs[ind].style.backgroundColor = "#681a41";
 	txts[ind].classList.add("show");
 
 	tabs[ind].scrollIntoView({inline:"center"})
