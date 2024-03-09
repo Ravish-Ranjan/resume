@@ -129,10 +129,11 @@ body main .toptab .profiden .txtinfo {
   text-align: center;
 }
 body main .toptab .profiden .txtinfo #name {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 body main .toptab .profiden .txtinfo #title {
   text-decoration: underline;
+  color: #ddd;
 }
 body main .toptab .profinfo {
   flex: 1 0 25%;
