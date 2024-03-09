@@ -29,7 +29,6 @@ function scrollDiv(direction) {
 }
 let tog = true;
 function shownav(open = tog) {
-	console.log(open);
 	nav.style.transform = (open)?"translateY(0%)":"translateY(-100%)";
 	tog = !tog;
 }
