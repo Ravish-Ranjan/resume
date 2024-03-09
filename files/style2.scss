@@ -160,6 +160,8 @@ body {
 						text-align: end;
 						gap: 0.5rem;
 						width: 90%;
+						font-size: 1.5rem;
+						font-weight: 500;
 						border-bottom: 1px solid #681a41;
 						&:first-of-type {
 							width: 100%;
@@ -267,7 +269,7 @@ body {
 							background-color: #00000028;
 							padding: 0.3rem;
 							font-weight: 500;
-							font-size: 1.3rem;
+							font-size: 1.5rem;
 							&:nth-of-type(2) {
 								flex: 1 1 60%;
 							}

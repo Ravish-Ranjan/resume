@@ -158,6 +158,8 @@ body main .toptab .profinfo .info .blck {
   text-align: end;
   gap: 0.5rem;
   width: 90%;
+  font-size: 1.5rem;
+  font-weight: 500;
   border-bottom: 1px solid #681a41;
 }
 body main .toptab .profinfo .info .blck:first-of-type {
@@ -262,7 +264,7 @@ body main .toptab .profbase .career li span {
   background-color: rgba(0, 0, 0, 0.1568627451);
   padding: 0.3rem;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 body main .toptab .profbase .degree li span:nth-of-type(2),
 body main .toptab .profbase .career li span:nth-of-type(2) {
