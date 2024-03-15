@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ms. Sakshi: UN Fellow, Skill India Pioneer | Inspire Next-Gen Leaders. Explore his transformative approach to education & empower your college.">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../files/style2.css">
+        <link rel="shortcut icon" href="../files/clglogo.png" type="image/x-icon">
+        <style></style>
+        <title>Ms. Sakshi | Ram Lal Anand College</title>
+    </head>
+    <body>
+        <button type="button" id="ham" onclick="shownav()">
+            <img src="https://api.iconify.design/material-symbols:menu-rounded.svg?color=%23ffffff" alt="Menu">
+        </button>
+        <ul id="nav">
+            <li><a href="#degree" onclick="shownav(false)">Degree & Career</a></li>
+            <li><a href="#ancinfo" onclick="swt(0)">Administrative Assignments</a></li>
+            <li><a href="#ancinfo" onclick="swt(1)">Areas of Interest / Specialization</a></li>
+            <li><a href="#ancinfo" onclick="swt(2)">Subjects Taught</a></li>
+            <li><a href="#ancinfo" onclick="swt(3)">Publications Profile (Books/Chapters/Research articles, etc.)</a></li>
+            <li><a href="#ancinfo" onclick="swt(4)">Other Activities</a></li>
+        </ul>
+        <main>
+            <section class="toptab">
+                <div class="profiden">
+                    <img src="./files/profilepic.jpeg" alt="profile image">
+                    <div class="txtinfo">
+                        <span id="name">Ms. Sakshi</span>
+                        <span id="title">Assistant Professor</span>
+                    </div>
+                </div>
+                <div class="profinfo">
+                    <div class="info">
+                        <div class="blck pad">
+                            <p class="box-title">Ram Lal Anand College</p>
+                        </div>
+                        <div class="blck pad">
+                            <img src="https://api.iconify.design/material-symbols:add-location.svg?color=%23681a41" alt=""></img>
+                            <p>#81, Vasant Enclave, New Delhi Pin code- 110057</p>
+                        </div>
+                        <div class="blck pad">
+                            <img src="https://api.iconify.design/material-symbols:call-sharp.svg?color=%23681a41" alt=""></img>
+                            <p>7206272864</p>
+                        </div>
+                        <div class="blck pad">
+                            <img src="https://api.iconify.design/material-symbols:attach-email.svg?color=%23681a41" alt=""></img>
+                            <p>sakshisharma.cs@rla.du.ac.in</p>
+                        </div>
+                        <div class="blck pad">
+                            <img src="https://api.iconify.design/material-symbols:add-link-rounded.svg?color=%23681a41" alt=""></img>
+                            <p><a id="link" href="https://scholar.google.com/citations?hl=en&user=1mctpyYAAAAJ&view_op=list_works&gmla=AHoSzlUxYASfITugWmNYC0kmb8y0RI0hFM6XxA8V2gZWGxsXPpz8cIFP_2zG4m3f1VTrXQGyyod0sy2dFRrnJx" target="_blank">Google Scholar Profile</a></p>
+                        </div>
+                        <div class="blck pad">
+                            <img src="https://api.iconify.design/material-symbols:add-link-rounded.svg?color=%23681a41" alt=""></img>
+                            <p><a id="link" href="https://www.researchgate.net/profile/Sakshi-Sharma-70" target="_blank">ResearchGate Profile</a></p>
+                        </div>
+                        <div class="blck pad">
+                            <img src="https://api.iconify.design/material-symbols:add-link-rounded.svg?color=%23681a41" alt=""></img>
+                            <p><a id="link" href="https://vidwan.inflibnet.ac.in/profile/394477" target="_blank">VIDWAN Profile</a></p>
+                        </div>
+                    </div>
+                    <a href="https://rlacollege.edu.in/images/Prof%20Rakesh%20Gupta%20Profile.pdf" download="resume" class="download" target="_blank">
+                        <img src="https://api.iconify.design/material-symbols:download-rounded.svg?color=%23ffffff" alt=""></img>
+                        <span>Download</span>
+                    </a>
+                </div>
+                <div class="profbase">
+                    <div class="degree" id="degree">
+                        <li class="padn box-title">DEGREE</li>
+                        <li class="padn"><span>Ph.D</span><span>BR Ambedkar National Institute of Technology (NIT), Jalandhar, Punjab</span><span>2020-ongoing</span></li>
+                        <li class="padn"><span>M.Tech</span><span>Department of Computer Science, Kurukshetra University, Haryana </span><span>2016</span></li>
+                        <li class="padn"><span>B.Tech</span><span>Kurukshetra University, Haryana</span><span>2013</span></li>
+                        <li class="padn"><span>Diploma</span><span>Haryana State Board of Technical Education, Haryana</span><span>2010</span></li>
+                    </div>
+                    <div class="career" id="career">
+                        <li class="padn box-title">CAREER</li>
+                        <li class="padn"><span>Assistant Professor, January 2023-till date in the Department of Computer Science, Ram Lal Anand College, University of Delhi</span></li>
+                        <li class="padn"><span>Assistant Professor (July-Dec 2018) in Department of Computer Science, SD College, A/Cantt, Haryana</span></li>
+                        <li class="padn"><span>Assistant Professor (Feb 2017 - May 2018) in Department of Computer Science & Engineering, Seth Jai Prakash Mukand Lal Institute of Engineering & Technology, Yamunanagar, Haryana</span></li>
+                        <li class="padn"><span>Assistant Professor (Aug 2016 - Jan 2018) in Department of Computer Science & Engineering, GITM, Karnal, Haryana.</span></li>
+                    </div>
+                </div>
+            </section>
+            <section class="ancbar">
+                <button id="lt" onclick="scrollDiv('left')"><img src="https://api.iconify.design/material-symbols:chevron-left-rounded.svg?color=%23ffffff" alt="◀"></button>
+                <span class="tabbut" onclick="swt(0)">Administrative Assignments</span>
+                <span class="tabbut" onclick="swt(1)">Areas of Interest / Specialization</span>
+                <span class="tabbut" onclick="swt(2)">Subjects Taught</span>
+                <span class="tabbut" onclick="swt(3)">Publications Profile (Books/Chapters/Research articles, etc.)</span>
+                <span class="tabbut" onclick="swt(4)">Other Activities</span>
+                <button id="rt" onclick="scrollDiv('right')"><img src="https://api.iconify.design/material-symbols:chevron-right-rounded.svg?color=%23ffffff" alt="▶"></button>
+            </section>
+            <section class="ancinfo" id="ancinfo">
+                <div class="infotxt show">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Administrative Assignments</span><br><br>
+                        ● Co-convener, College Website Commitee<br><br>
+						● Member, Women's Welfare Advisory Committee<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Areas of Interest / Specialization</span><br><br>
+                        ● Digital Forensics, IoT forensics, Data Analytics, Cyber Security<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Subjects Taught</span><br><br>
+                        ● Data Structure<br><br>
+						● Discrete Mathematics Structure<br><br>
+						● Data Interpretation and Visualization using python<br><br>
+						● Computer System Architecture<br><br>
+						● Database Management System<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Publications Profile (Books/Chapters/Research articles, etc.)</span><br><br>
+                        ● Sakshi, A. Malik, and A. K. Sharma, “Blockchain-based digital chain of custody multimedia evidence preservation framework for internet-of-things,” Journal of Information Security and Applications, vol. 77, p. 103579, 2023, doi: 10.1016/j.jisa.2023.103579<br><br>
+                        ● Sakshi;, A. Malik, and Sharma Ajay K., “A survey on blockchain based IoT forensic evidence preservation : research trends and current challenges,” Multimedia Tools Applications, 2023, doi: 10.1007/s11042-023-17104-z.<br><br>
+                        ● Azad Singh, Shilpa Singla, Sakshi Sharma, Pankaj Sharma; “Allpath: All Path Routing Algorithm in Wired Network”; International Journal of Knowledge Based Computer Systems(Impact Factor: 2.995) , ISSN Number: 2321-5623, Volume 4, Issue 2, December 2016, Page No. 24-28.<br><br>
+						● Azad Singh; Pankaj Sharma; Sakshi; “A Novel Memory Approach for Windows 10” Journal of Network and Information Security (Impact Factor: 4.662.) ISSN 2321-6859, Volume 4 Issue 2 Dec 2016.<br><br>
+						● Sakshi; Dr. Shuchita Upadhyaya; “Twitter Streaming API using Apache Spark In Big Data Analytics” National Conference on Advances in Computer Science & Engineering (ACSE-2016, Department of Computer Science and Applications, April 29-30, 2016, International Journal of Scientific & Engineering Research, Volume 7, Issue 12, ISSN 2229-5518, Page No. 354-359)<br><br>
+						● Dr. Shuchita Upadhyaya; Sakshi; “Latency Analysis for Big Data Using Apache Spark” Journal "OUTREACH" ISSN: 2395-4620 Vol II, Issue 2<br><br>
+						● Sakshi; Dr. Shuchita Upadhyaya; “Apache Spark: A multipurpose tool for Data Analysis” National Seminar on Data Handling Techniques: Application In Information Technology, GMN Postgraduate College, Ambala Cantt, March 04-05, 2016.<br><br>
+						● Sakshi; Dr. Shuchita Upadhyaya; “Performance Enhancement of Big Data using Apache Spark Platform” National Conference on Recent Innovations In Electronics, Electrical & Computer Engineering (RIEECE-2016), Baddi University, April 13, 2016, Volume 3, Spl. Issue 1, e-ISSN : 1994-2310 | p-ISSN : 1694-2426.<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Other Activities</span><br><br>
+                        ● Attended Five Days Online Hands-On Training Program on “Data Analysis using SPSS” Organized by the LekSha Research Centre, Gandhinagar, Gujarat from 14th - 18th June, 2023.<br><br>
+						● Successfully Completed Two - week Online Interdisciplinary Refresher Course in “Advanced Research Methodology” from 22 May - 05 June, 2023.<br><br>
+						● Successfully participated in “IP Awareness/Training program” under National Intellectual Property Awareness Mission on 25th April, 2023, organized by Intellectual Property Office, India.<br><br>
+						● Successfully completed One-Month Online National Faculty Induction Programme/Orientation Course organized by Guru Angad Dev Teaching Learning Centre, SGTB Khalsa College, University of Delhi under the Pandit Madan Mohan Malaviya, National Mission on Teachers and Teaching (PMMMNMTT) of Ministry of Education 25th February to 27th March 2023.<br><br>
+						● Participated in the one-week Online Short Term Course on "DEMYSTIFYING INTELLECTUAL PROPERTY FOR RESEARCH INTEGRITY AND ECONOMIC DEVELOPMENT" organized by the Department of Computer Science & Engineering, Delhi Technological University, Delhi held from March 13 to 17, 2023.<br><br>
+						● Participated in National High-End Workshop (Karshyashala) on “Cyber Security and Digital Forensics”; IIIT Pune, under SERB Accelerate Vigyan, 23July-29 July 2022.<br><br>
+						● Attended One-week online Faculty Development Programme on “Blockchain Assisted Federated Machine Learning for Securing Big Data Analytics and IoT”; B. R. Ambedkar National Institute of Technology, Jalandhar, 08April -12 April 2022.<br><br>
+						● Attended e-Workshop ISBT-2021 organized by National Institute of Technology, Hamirpur, 28 April-02 May 2021.<br><br>
+						● Attended One-week online Faculty Development Programme on “Blockchain Assisted Federated Machine Learning for Securing Big Data Analytics and IoT” by B. R. Ambedkar National Institute of Technology, Jalandhar, 08-12 April 2022.<br><br>
+						● Attended e-Workshop “Information Security and Blockchain Technology (ISBT)-2021 organized by National Institute of Technology, Hamirpur, 28 April-02 May 2021. <br><br>
+						● Participated in ISEA-II sponsored STC on “Cyber Security and Forensic” organized by B. R. Ambedkar National Institute of Technology, Jalandhar, 22 -26 March 2021.<br><br>
+						● Participated in online STC on “Security and Privacy Challenges in Computing Paradigms (SPCCP-2020)” by Dr. B R Ambedkar National Institute of Technology, Jalandhar, 1 - 5 September 2020<br><br>
+						● Participated in e-STC “Identify the Weakest Link: An International e-STC on recent attacking and defensive strategies” by Dr. B R Ambedkar National Institute of Technology, Jalandhar, 10-14 August 2020<br><br>
+						● Participated in National Workshop on “Cyber: Security Innovation and Opportunities by National Institute of Technology, Kurukshetra, 12-13 February 2016.<br><br>
+						● Hands on Workshop on “IPv4 to IPv6 Migration methods” conducted by NITTTR, Chandigarh.<br><br>
+						● Attended 5-day workshop on “Data Analytics” organized by Dept of Computer Science and Application, Kurukshetra University, Kurukshetra, 23-27 September 2015.<br><br>
+						● Attended 3-day workshop on “Cloud Computing” organized by Dept of Computer Science and Application, Kurukshetra University, Kurukshetra, 20-22 September 2015.<br><br>
+                    </p>
+                </div>
+            </section>
+        </main>
+        <script src="../files/script.js"></script>
+    </body>
+</html>
