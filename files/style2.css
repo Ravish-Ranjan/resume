@@ -261,7 +261,6 @@ body main .toptab .profbase .degree li span,
 body main .toptab .profbase .career li span {
   flex: 0 0 20%;
   text-align: center;
-  text-transform: lowercase;
   background-color: rgba(0, 0, 0, 0.1568627451);
   padding: 0.3rem;
   font-weight: 500;
