@@ -46,7 +46,8 @@ table tbody tr th {
 table tbody tr td {
   padding: 0.5rem;
 }
-table th, table td {
+table th,
+table td {
   border: 1px solid white;
 }
 
@@ -250,6 +251,7 @@ body main .toptab .profbase .career {
   align-items: center;
   gap: 1rem;
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
   background-image: linear-gradient(to top, var(--brand), var(--brand) 10%, transparent 30%, transparent 80%, var(--brand) 90%, var(--brand));
 }
@@ -448,6 +450,7 @@ body main .ancinfo .show {
   .career {
     gap: 1rem;
     max-height: 50svh;
+    overflow-x: hidden;
   }
   .degree::-webkit-scrollbar,
   .career::-webkit-scrollbar {
@@ -494,7 +497,8 @@ body main .ancinfo .show {
   .profinfo {
     justify-items: stretch !important;
   }
-  body #ham, body #ham + #nav {
+  body #ham,
+  body #ham + #nav {
     display: grid;
   }
 }
