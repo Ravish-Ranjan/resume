@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Dr. Neelam Rishikalp from Mathematics department ">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../files/style2.css">
+        <link rel="shortcut icon" href="../files/clglogo.png" type="image/x-icon">
+        <style></style>
+        <title>Dr. Neelam Rishikalp | Ram Lal Anand College</title>
+    </head>
+    <body>
+        <button type="button" id="ham" onclick="shownav()">
+            <img src="https://api.iconify.design/material-symbols:menu-rounded.svg?color=%23ffffff" alt="Menu">
+        </button>
+        <ul id="nav">
+            <li><a href="#degree" onclick="shownav(false)">Degree & Career</a></li>
+            <li><a href="#ancinfo" onclick="swt(0)">Teaching Experience (Subjects/Courses Taught)</a></li>
+            <li><a href="#ancinfo" onclick="swt(1)">Research Interest / Specialization</a></li>
+            <li><a href="#ancinfo" onclick="swt(2)">Administrative Duties</a></li>
+            <li><a href="#ancinfo" onclick="swt(3)">Examination and Evaluation duties assigned by College/University</a></li>
+            <li><a href="#ancinfo" onclick="swt(4)">Organizing Seminars/Conference/Workshops</a></li>
+            <li><a href="#ancinfo" onclick="swt(5)">Development of E-content</a></li>
+            <li><a href="#ancinfo" onclick="swt(6)">Refresher Course/ Workshop/ Faculty Development Program</a></li>
+            <li><a href="#ancinfo" onclick="swt(7)">Publications</a></li>
+            <li><a href="#ancinfo" onclick="swt(8)">Published Articles</a></li>
+            <li><a href="#ancinfo" onclick="swt(9)">Books/Works edited</a></li>
+            <li><a href="#ancinfo" onclick="swt(10)">Conference Organization / Presentation</a></li>
+            <li><a href="#ancinfo" onclick="swt(11)">Fellowship & Awards</a></li>
+            <li><a href="#ancinfo" onclick="swt(12)">Research Projects (Major Grants/Research Collaboration)</a></li>
+            <li><a href="#ancinfo" onclick="swt(13)">Professional Societies Membership</a></li>
+            <li><a href="#ancinfo" onclick="swt(14)">Others</a></li>
+        </ul>
+        <main>
+            <section class="toptab">
+                <div class="profiden">
+                    <img src="profilepic.png" alt="profile image">
+                    <div class="txtinfo">
+                        <span id="name">Dr. Neelam Rishikalp</span>
+                        <span id="title">Professor</span>
+                    </div>
+                </div>
+                <div class="profinfo">
+                    <div class="info">
+                        <div class="blck pad">
+                            <p class="box-title">Ram Lal Anand College</p>
+                        </div>
+                        <div class="blck pad">
+                            <img src="https://api.iconify.design/material-symbols:add-location.svg?color=%23681a41" alt=""></img>
+                            <p><b>Office Add.:</b> 5, Benito Juarez Road, New Delhi - 110021</p>
+                        </div>
+                        <div class="blck pad">
+                            <img src="https://api.iconify.design/material-symbols:add-location.svg?color=%23681a41" alt=""></img>
+                            <p><b>Home Add.:</b> 522, Kamal Vihar Apartment Plot No. 5, Sector 7, Dwarka New Delhi-110027</p>
+                        </div>
+                        <div class="blck pad">
+                            <img src="https://api.iconify.design/material-symbols:call-sharp.svg?color=%23681a41" alt=""></img>
+                            <p>9810672284</p>
+                        </div>
+                        <div class="blck pad">
+                            <img src="https://api.iconify.design/material-symbols:attach-email.svg?color=%23681a41" alt=""></img>
+                            <p><a href="mailto:drneelamri@gmail.com">drneelamri@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <a href="./neelam rishikalp.pdf" download="Neelam Rishikalp's resume" class="download" target="_blank">
+                        <img src="https://api.iconify.design/material-symbols:download-rounded.svg?color=%23ffffff" alt=""></img>
+                        <span>Download</span>
+                    </a>
+                </div>
+                <div class="profbase">
+                    <div class="degree" id="degree">
+                        <li class="padn box-title">DEGREE</li>
+                        <li class="padn"><span>Ph.D.</span><span>Delhi University</span><span>1989</span><span>Awarded</span></li>
+                        <li class="padn"><span>M.Phil.</span><span>Delhi University</span><span>1984</span><span>Awarded</span></li>
+                        <li class="padn"><span>MA. Hindi</span><span>Delhi University</span><span>1982</span><span>1st Division</span></li>
+                        <li class="padn"><span>B.A. Hons. Hindi</span><span>Delhi University</span><span>1980</span><span>1st Division</span></li>
+                        <li class="padn"><span>Diploma in Bengali</span><span>Delhi University</span><span>1983</span><span>2nd Division</span></li>
+                        <li class="padn"><span>Certificate course in Bengali</span><span>Delhi University</span><span>1983</span><span>2nd Division</span></li>
+                        <li class="padn"><span>Certificate course in Translation</span><span>Delhi University</span><span>1983</span><span>2nd Division</span></li>
+                    </div>
+                    <div class="career" id="career">
+                        <li class="padn box-title">CAREER</li>
+                        <li class="padn"><span>Ram Lal Anand</span><span>Associate Professor</span><span>28/05/2001-till now</span></li>
+                        <li class="padn"><span>Ram Lal Anand</span><span>Leader</span><span>01/01/1996 - 02/05/2001</span></li>
+                        <li class="padn"><span>Ram Lal Anand</span><span>Lecturer</span><span>26/11/1983 - 01/01/1996</span></li>
+                        <li class="padn"><span>Institute of Life Long Learning, South Campus, Delhi University</span><span>Fellow</span><span>Since 2021-2012</span></li>
+                    </div>
+                </div>
+            </section>
+            <section class="ancbar">
+                <button id="lt" onclick="scrollDiv('left')"><img src="https://api.iconify.design/material-symbols:chevron-left-rounded.svg?color=%23ffffff" alt="◀"></button>
+                <span class="tabbut" onclick="swt(0)">Teaching Experience (Subjects/Courses Taught)</span>
+                <span class="tabbut" onclick="swt(1)">Research Interest / Specialization</span>
+                <span class="tabbut" onclick="swt(2)">Administrative Duties</span>
+                <span class="tabbut" onclick="swt(3)">Examination and Evaluation duties assigned by College/University</span>
+                <span class="tabbut" onclick="swt(4)">Organizing Seminars/Conference/Workshops</span>
+                <span class="tabbut" onclick="swt(5)">Development of E-content</span>
+                <span class="tabbut" onclick="swt(6)">Refresher Course/ Workshop/ Faculty Development Program</span>
+                <span class="tabbut" onclick="swt(7)">Publications</span>
+                <span class="tabbut" onclick="swt(8)">Published Articles</span>
+                <span class="tabbut" onclick="swt(9)">Books/Works edited</span>
+                <span class="tabbut" onclick="swt(10)">Conference Organization / Presentation</span>
+                <span class="tabbut" onclick="swt(11)">Fellowship & Awards</span>
+                <span class="tabbut" onclick="swt(12)">Research Projects (Major Grants/Research Collaboration)</span>
+                <span class="tabbut" onclick="swt(13)">Professional Societies Membership</span>
+                <span class="tabbut" onclick="swt(14)">Others</span>
+                <button id="rt" onclick="scrollDiv('right')"><img src="https://api.iconify.design/material-symbols:chevron-right-rounded.svg?color=%23ffffff" alt="▶"></button>
+            </section>
+            <section class="ancinfo" id="ancinfo">
+                <div class="infotxt show">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Teaching Experience (Subjects/Courses Taught)</span><br><br>
+                        ● Teaching experience of 38 years (From 1983 till date)<br><br>
+                        ● Undergraduate level teaching: B.A Hindi (Prog), B.Com (Prog), B.A Hindi (Hons)<br><br>
+                        ● Postgraduate level teaching: M.A Hindi (University of Delhi), SOL - University of Delhi.<br><br>
+                        ● M.A. Hindi & BA, BDP (IGNOU)<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Research Interest / Specialization</span><br><br>
+                        ● Medieval Hindi Literature
+                    </p>
+                </div>
+                
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Administrative Duties</span><br><br>
+                        ● Teacher  In charge - Hindi Department (2018)<br><br>
+                        ● Co-Convener - Admission Committee (2018)<br><br>
+                        ● Convener - Screening Committee (2018)<br><br>
+                        ● Member - Selection Committee for Appointment of Assistant Lecturer (2015-2018)<br><br>
+                        ● Convener - Best Student Award Committee (2018)<br><br>
+                        ● Convener - Laptop Committee (2013-2017)<br><br>
+                        ● Convener - Fee Concession Committee (2015-2017)<br><br>
+                        ● Public Information Officer (2014-2017)<br><br>
+                        ● Teacher Coordinator - SOL (2015-2016)<br><br>
+                        ● Member - Time Table Committee (2013-2016)<br><br>
+                        ● Convener - Internal Complaint Committee (2013-2016)<br><br>
+                        ● Convener - AECC Committee (2013-2016)<br><br>
+                        ● Incharge - Anti ragging (2015-2016)<br><br>
+                        ● Convener - Swachta Abhiyan (2015-2016)<br><br>
+                        ● Nodal Officer - Student Scholarship (2014-2016)<br><br>
+                        ● Convener - Sports Committee (2013-2016)<br><br>
+                        ● Convener - Women Welfare Committee (2013-2015)<br><br>
+                        ● Assistant Coordinator - IGNOU Study Center (2012)<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Examination and Evaluation duties assigned by College/University</span><br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Organizing Seminars/Conference/Workshops</span><br><br>
+                        ● Certificate Course in Translation (English - Hindi) (2022)<br><br>
+                        ● Certificate Course in Translation (English - Hindi) (2021)<br><br>
+                        ● Certificate Course in Translation (English - Hindi) (2020)<br><br>
+                        ● Certificate Course in Translation (English - Hindi) (2019)<br><br>
+                        ● Seminar - Vyang ke bahane: Dr. Harish Naval (2018)<br><br>
+                        ● Seminar - Samachar aur anuvad: Rajender Upadhyay (2018)<br><br>
+                        ● Seminar - Russia mein bhartiya bhashaon ka adhyan: Dr. Luidimila Khokhlova (2018)<br><br>
+                        ● Seminar - Stree lekhan: Metreyi Pushpa (2018)<br><br>
+                        ● Workshop - Television Production: Sh. Ramesh Chander (2017)<br><br>
+                        ● Seminar - Samachar aur anuvad: Rajender Upadhyay (2016)<br><br>
+                        ● Seminar - Anchor se mulakat: Siddhartha ABP Channel (2013)<br><br>
+                        ● Seminar - Blog ki duniya aur Hindi: Shailesh Bhartvasi (2012)<br><br>
+                        ● Seminar - Media lekhan aur badalti bhasha: Balamukund Sinha (2012)<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Development of E-content</span><br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Refresher Course/ Workshop/ Faculty Development Program</span><br><br>
+                        ● Workshop: Sodhprvidhi Sedhantiki<br><br>
+                        ● Higher Education & Interdisciplinary Studies<br><br>
+                        ● Orientation Program: On Code of Conduct and Professional Ethics<br><br>
+                        ● Faculty development program on stress Manegment.<br><br>
+                        ● Naty Sangoshti evam karyshala# International Hindi sammelan<br><br>
+                        ● Vishav Patal aur Hindi Adyapan ki chunoutiyan<br><br>
+                        ● International seminar : Post independence Hindi Litratutre.<br><br>
+                        ● National Conference on 25th Years of Globalization and its impact on Indian Economy.<br><br>
+                        ● Workshop: E-Content creation in Hindi writing Gender Sensitization & Implementation of the Sexual Harassment at work-place Harassment of Women at workplace.<br><br>
+                        ● Workshop: Intellectual Property Rights<br><br>
+                        ● Workshop: Foundation Courses (LLC-Hindi)<br><br>
+                        ● National Seminar Sahitya ke Shikshan Ka Uddeshyay<br><br>
+                        ● Workshop: Rachnatmak Lekhan<br><br>
+                        ● Naatak aur Rangmanch Adhyayan, Adhyapan aur Sameeksha<br><br>
+                        ● National Seminar on Diaspora & Cultural diversity: India and Canada<br><br>
+                        ● Academic Counselling for MHD<br><br>
+                        ● Workshop on Language Literature and Culture<br><br>
+                        ● All India Conference on Universal Values and<br><br>
+                        ● Higher Education<br><br>
+                        ● Training Course on Internet Concepts and its Applications<br><br>
+                        ● Training Course on Windows-95, MS Word, Power Point<br><br>
+                        ● Refresher Course in Hindi Katha Sahitya:<br><br>
+                        ● Rachna-Kram aur Samiksha-Drisht<br><br>
+                        ● Refresher Course in Madhyayugeen Hindi Sahitya ke Adhyan ki Samasyaen<br><br>
+                        ● Gender Sensitization & Implementation of the Sexual Harassment of Women at workplace<br><br>
+                        ● Workshop: Intellectual Property Rights<br><br>
+                        ● Workshop: Foundation Courses (LLC-Hindi)<br><br>
+                        ● National Seminar Sahitya ke Shikshan Ka Uddeshyay<br><br>
+                        ● Workshop: Rachnatmak Lekhan<br><br>
+                        ● Naatak aur Rangmanch Adhyayan, Adhyapan aur Sameeksha<br><br>
+                        ● National Seminar on Diaspora & Cultural Diversity: India and Canada<br><br>
+                        ● Academic Counselling<br><br>
+                        ● for MHD<br><br>
+                        ● Workshop on Language Literature and Culture<br><br>
+                        ● All India Conference on Universal Values and<br><br>
+                        ● Higher Education<br><br>
+                        ● Training Course on Internet Concepts and its Applications<br><br>
+                        ● Training Course on Windows-95, MS Word, Power Point<br><br>
+                        ● Refresher Course in Hindi Katha Sahitya:<br><br>
+                        ● Rachna-Kram aur Samiksha-Drisht<br><br>
+                        ● Refresher Course in Madhyayugeen Hindi Sahitya ke Adhyan ki Samasyaen<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Publications</span><br><br>
+                        ● Jayasi Ki Samajik Chetna Sarthak Prakashan<br><br>
+                        ● Tulsi Sahitye Mein Nagar Varnan Sanmarg Prakashan<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Published Articles</span><br><br>
+                        ● Aam Admi ki Patrakaarita Aur Vaikalpik Media<br><br>
+                        ● Kanahawat Mein Kavya Saundrya<br><br>
+                        ● Kanahawat Mein Darshan Aur Pream Nirupan<br><br>
+                        ● Madhyakaleen BhaktiAndolan: Saamaajik Kranti<br><br>
+                        ● Tulsi Das ka Brajbhasha Kavya<br><br>
+                        ● Hindi Sahitya Aur Sanskritik Rastrawad<br><br>
+                        ● Kavitawali samsamyik Muktak<br><br>
+                        ● Parakh Ki Parakh Aur Jainendra Kumar <br><br>
+                        ● Guru Nanak Dev Ji ki Udasiyan<br><br>
+                        ● Gandhi Ji ki Sarvodaya Patrakarita<br><br>
+                        ● Jaysi ka Sanskritik Lok<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Books/Works edited</span><br><br>
+                        ● Agey Smritiyon ke Jharoke se (Edited Book)<br><br>
+                        ● Bhasha Subodh (B A Program Hindi -B)<br><br>
+                        ● Yathaarth sampreshan aur katha bhasha (Bhodhgaya shivir ek report)<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Conference Organization / Presentation</span><br><br>
+                        ● Kovind ke dour mein sheshik sansthanon ki samasya - International Webinar (2020)<br><br>
+                        ● Hindi ki Antarrashtriyta - Antarrastrey Sammelan (2020)<br><br>
+                        ● Kabeer ke Ram - National Seminar (2019)<br><br>
+                        ● Gurunanak Dev Ji ki Udasiyan - International Seminar (2019).<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Fellowship & Awards</span><br><br>
+                        ● Fellowship -worked as fellow at “Institute of Life Long Learning' in Delhi University since July 2010 -2012<br><br>
+                        May. 
+                        ● Awarded Teaching Excellence Award for Innovation project (Connecting Digital World to The Physical World<br><br>
+                        Throug Social Media) by Delhi University in the year 2015.  
+                        ● Awarded "Best Inovation Idea Connecting Digital World to The Physical World Through Social Media" by INOVATION PLAZA, Delhi University in 2013. <br><br>
+                        ● My Book “तुलसी साहित्य में नगर वर्णन” was awarded for publication By Hindi Academy in 1994.<br><br>
+                        ● Awarded 'Best All-round Student' of Hindi Department at Indraprastha College of University of Delhi in 1980.<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Research Projects (Major Grants/Research Collaboration)</span><br><br>
+                        ● Delhi University Innovation Project titled “Connecting Digital world to physical world through social media” for the year 2013.<br><br>
+                        ● Delhi  University  Innovation  Project titled “Automatic green corridor using sensors to save human life in Delhi” for the year 2015.<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Professional Societies Membership</span><br><br>
+                        ● Membership of the faculty of Arts (2016 to 2019) and (2019-2023)<br><br>
+                        ● Assistant Coordinator at IGNOU Study Center (July 1996 to July 2012)<br><br>
+                        ● Co-editor (E-Pradeep Online Hindi Partrika)<br><br>
+                        ● Founder Member Vaatayan Educational society.<br><br>
+                    </p>
+                </div>
+                <div class="infotxt">
+                    <p>
+                        <span style="text-decoration: underline;font-size: 2.2rem;">Others</span><br><br>
+                        ● I have worked for all Academic and Administrative committees in the college.<br><br>
+                        ● As  a  resident  member  of  Kamal  Vihar  Society.  plot-5  Sector-7  Dwarka  I  was  elected  as  President  for  two consecutive terms.<br><br>
+                        ● For the welfare of society and  maintaining harmonious environment I organized all National and religious functions in the society.<br><br>
+                        ● To conserve energy 200KW solar energy plant is installed in the society under my presidentship in 2018.<br><br>
+                    </p>
+                </div>
+            </section>
+        </main>
+        <script src="../files/script.js"></script>
+    </body>
+</html>
