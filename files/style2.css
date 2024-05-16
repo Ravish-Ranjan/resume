@@ -30,21 +30,24 @@ span {
 table {
   margin: 0 auto;
   width: 100%;
-  height: 100%;
 }
 table tbody {
   background-color: rgba(0, 0, 0, 0.4);
+  min-height: 100%;
+  overflow-y: auto;
 }
 table tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.2666666667);
 }
 table tbody tr th {
   background-color: rgba(0, 0, 0, 0.4666666667);
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   height: auto;
+  min-height: 15svh;
 }
 table tbody tr td {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
+  min-height: 15svh;
 }
 table th,
 table td {
